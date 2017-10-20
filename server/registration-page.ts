@@ -9,8 +9,8 @@ socketeer.from('REGISTER_FROMCLIENT').subscribe(request => {
   //request.email, request.password
   const user:IUser; //..grab user from database or whatever
  
-  socketeer.send('REGISTER_FROMSERVER', {
-    user: user //will throw a typescript error if not a IUser
+  socketeer.send('REGISTER_FROMSERVER', { //will throw a typescript compile error if value doesn't match the interface it expects
+    user: user
   });
 });
 //...
