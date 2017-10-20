@@ -5,7 +5,7 @@ import {IUser} from '../shared/interface/user';
 //...
 const socketeer = new Socketeer(SocketCommand, socket);
 //....
-const user$ = socketeer.from('REGISTER_FROMSERVER').map(request => request.user);
+const user$ = socketeer.from('REGISTER_FROMSERVER').map(data => data.user);
 
 //when form is submitted
 socketeer.send('REGISTER_FROMCLIENT', { //will throw a typescript compile error if value doesn't match the interface it expects
