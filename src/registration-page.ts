@@ -1,4 +1,4 @@
-import {SocketCommand} from '../shared/sockeeter/user';
+import {SocketCommand} from '../shared/sockeeter/registration-page';
 import {Socketeer} from '../shared/socketeer/index';
 import {IUser} from '../shared/interface/user';
 
