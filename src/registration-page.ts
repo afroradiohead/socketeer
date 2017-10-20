@@ -8,7 +8,7 @@ const socketeer = new Socketeer(SocketCommand, socket);
 const user$ = socketeer.from('REGISTER_FROMSERVER').map(request => request.user);
 
 //when form is submitted
-socketeer.send('REGISTER_FROMCLIENT', { //will throw a typescript compile object doesn't match type
+socketeer.send('REGISTER_FROMCLIENT', { //will throw a typescript compile error if value doesn't match the interface it expects
   email: "chrissychris@gmail.com",
   password: "youknowdatpassword"
 });
